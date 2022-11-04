@@ -1,6 +1,6 @@
 /* SMOOTH SCROLL DOWN FOR SECTIONS */
 :root {
-  --lighter: #1f2021;
+  --lighter: #0f0f1c;
   --darker: #0b0f14;
   --grreenish: #2DC838;
 }
@@ -70,6 +70,8 @@ html, body {
   font-weight: lighter;
 }
 
+/* MENU HOVER */
+
 .hover-underline-animation {
   position: relative;
   color: #FFFFFF;
@@ -95,6 +97,7 @@ html, body {
 }
 
 /* TYPEWRITER LETTERS */
+
 .typewrite {
   /* color:var(--grreenish); */
   /*include this only if you need a hyperlink*/
@@ -104,6 +107,7 @@ html, body {
   font-weight: bold;
   font-family: 'Source Code Pro', monospace;
 }
+
 
 .box {
   /* width: 100%;
@@ -140,13 +144,22 @@ html, body {
   font-size: 1.5rem;
 }
 
+#main {
+  /* position: relative; */
+  width: 100vw;
+  top: 105;
+  left: 0;
+  height: 75vh;
+  overflow: hidden;
+}
+
 /* SECTIONS */
 
 /* SECTION 1 */
 .section-1 {
   background-color: var(--darker);
   opacity: 1;
-  padding: 15% 3% 20% 3%;
+  padding: 15% 3% 0 0%;
 }
 
 .box p {

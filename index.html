@@ -4,9 +4,12 @@
 <html lang="en">
 
 <head>
-  <link rel="icon" href="images/tab.png">
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- favicon -->
+
 
   <!-- Load font awesome icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,6 +29,7 @@
   <script type="text/javascript" src="js/fade-out.js"></script>
   <script type="text/javascript" src="js/popup.js"></script>
   <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+  <script type="text/javascript" src="js/three.js"></script>
 
   <!-- BOOTSTRAP SCRIPTS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -37,14 +41,10 @@
   <div class="container-fluid">
     <div class="navigator" id="navbar">
       <nav class="navbar navbar-expand-md navbar-dark navbar-custom">
-        <div class="col-6 col-lg-2 col-md-4 col-sm-6 col-xs-6" style="line-height: 0.6;">
+        <div class="col-6 col-lg-2 col-md-4 col-sm-6 col-xs-6" style="line-height: 0.6; color: grey">
           <p class="logo-top">Delta<span style="color: #2DC838">Vision</span></p>
           <br>powered by Human Digital
         </div>
-
-
-
-
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
   					<span class="navbar-toggler-icon"></span>
@@ -71,9 +71,9 @@
 
     <!-- SECTION 1 -->
     <div class="container-fluid section-1 box" id="home">
-      <div class="">
+      <div class="" id='main'>
         <div class="col-lg-1"></div>
-        <div class="col-lg-8">
+        <div class="col-lg-8" style="padding: 0 0 0 5%">
           <h1 align='left'>
             DeltaVision technology (
             <a class="typewrite" data-period="2000" data-type='["Data", "Ethics", "Technology", "Trust", "Transparency", "Analytics"]'>
@@ -83,6 +83,86 @@
             <br>detects dangerous content at source, enabling safer online experiences for all.
           </h1>
         </div>
+
+          <script type="text/javascript" src="js/three.js">
+          </script>
+
+          <script>
+          var background_waves_background_color = "#0b0f14";
+          var background_waves_mesh_color = "#03240c";
+
+          function wavesBackground() {
+              var vertex_height = 15000,
+                  plane_segments_size = 100,
+                  plane_size = 1245000,
+                  background_color = background_waves_background_color,
+                  mesh_color = background_waves_mesh_color;
+              var container = document.getElementById('main'),
+                  inital_Z = [],
+                  count = 0;
+              var camera = new THREE.PerspectiveCamera(25, window.innerWidth / window.innerHeight, 1, 400000)
+              camera.position.z = 10000;
+              camera.position.y = 10000;
+              var scene = new THREE.Scene();
+              scene.fog = new THREE.Fog(background_color, 1, 500000);
+              var geometry = new THREE.PlaneGeometry(plane_size, plane_size, plane_segments_size, plane_segments_size);
+              var mesh = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({
+                  color: mesh_color,
+                  wireframe: !0
+              }));
+              mesh.rotation.x -= Math.PI * .5;
+              scene.add(mesh);
+              var renderer = new THREE.WebGLRenderer({
+                  alpha: !1
+              });
+              renderer.setSize(window.innerWidth, window.innerHeight);
+              renderer.setClearColor(background_color, 1);
+              container.appendChild(renderer.domElement);
+
+              function updateGeometry() {
+                  for (var i = 0; i < geometry.attributes.position.count; i++) {
+                      var z = Math.random() * vertex_height - vertex_height;
+                      geometry.attributes.position.setZ(i, z);
+                      inital_Z[i] = z
+                  }
+              };
+              updateGeometry();
+
+              function render() {
+                  requestAnimationFrame(render);
+                  var x = camera.position.x;
+                  var z = camera.position.z;
+                  camera.position.x = x * Math.cos(0.001) + z * Math.sin(0.001) - 10;
+                  camera.position.z = z * Math.cos(0.001) - x * Math.sin(0.001) - 10;
+                  camera.lookAt(new THREE.Vector3(0, 9000, 0))
+                  for (var i = 0; i < geometry.attributes.position.count; i++) {
+                      var next_z = Math.sin((i + count * 0.00002)) * (inital_Z[i] - (inital_Z[i] * 0.6));
+                      if (next_z !== next_z) return;
+                      geometry.attributes.position.setZ(i, next_z);
+                      geometry.attributes.position.needsUpdate = !0;
+                      count += 0.075
+                  }
+                  renderer.render(scene, camera)
+              }
+              render();
+
+              function resize() {
+                  camera.aspect = window.innerWidth / window.innerHeight;
+                  camera.updateProjectionMatrix();
+                  renderer.setSize(window.innerWidth, window.innerHeight)
+              }
+              window.addEventListener('resize', resize, !1)
+          };
+          wavesBackground();
+
+          </script>
+
+
+
+
+
+
+
 
       </div>
 
