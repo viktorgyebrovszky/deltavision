@@ -123,7 +123,6 @@ html, body {
   transform: translateY(20vh);
   visibility: hidden;
   transition: opacity 0.6s ease-out, transform 1.2s ease-out;
-  will-change: opacity, visibility;
 }
 
 .law_enforcement.is-visible {
@@ -150,7 +149,7 @@ html, body {
   top: 105;
   left: 0;
   height: 75vh;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 /* SECTIONS */
