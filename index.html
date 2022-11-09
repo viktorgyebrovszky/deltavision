@@ -59,6 +59,9 @@
               <a class="nav-link hover-underline-animation" href="#about">About</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link hover-underline-animation" href="#technology">Technology</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link hover-underline-animation" href="#product">Product</a>
             </li>
             <li class="nav-item">
@@ -88,7 +91,7 @@
           </script>
 
           <script>
-          var background_waves_background_color = "#0b0f14";
+          var background_waves_background_color = "#202124";
           var background_waves_mesh_color = "#0b5401";
 
           function wavesBackground() {
@@ -100,11 +103,11 @@
               var container = document.getElementById('main'),
                   inital_Z = [],
                   count = 0;
-              var camera = new THREE.PerspectiveCamera(25, window.innerWidth / window.innerHeight, 1, 400000)
+              var camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 1, 400000)
               camera.position.z = 10000;
               camera.position.y = 10000;
               var scene = new THREE.Scene();
-              scene.fog = new THREE.Fog(background_color, 1, 500000);
+              scene.fog = new THREE.Fog(background_color, 1, 300000);
               var geometry = new THREE.PlaneGeometry(plane_size, plane_size, plane_segments_size, plane_segments_size);
               var mesh = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({
                   color: mesh_color,
@@ -196,43 +199,6 @@
     <!-- SECTION 3 -->
     <div class="container-fluid section-3 box" id="about">
       <br>
-      <div class="container-fluid row">
-        <div class="col-lg-1"></div>
-        <div class="col-lg-3">
-          <div class="box medium-size">
-            ECT: Early Capture Technology
-          </div>
-          <!-- <span class="ability-title"><img class="job-img" src="images/ipg.png" alt="job-logo"></span> -->
-        </div>
-        <div class="col-lg-7">
-          <div class="box small-size">
-            Our SAAS Technology is built on the principle that good data is a priority for successful AI outcomes.
-            We have spent a decade building a deep understanding of content from dangerous organisations and individuals
-            to inform our Early Capture Technology. We do not use black-box algorithms and believe the path to a safer internet
-            can only be achieved using proportionate, compliant and measurable technology.
-          </div>
-        </div>
-        <div class="col-lg-1"></div>
-      </div>
-      <br>
-      <div class="container-fluid row">
-        <div class="col-lg-1"></div>
-        <div class="col-lg-3">
-          <div class="box medium-size">
-            What is ECT?
-          </div>
-        </div>
-        <div class="col-lg-7">
-          <div class="box small-size">
-            The nature and scale of harmful online content is constantly evolving. Platforms and technology companies across Web2, Web3 and the metaverse face enormous challenges in identifying and eradicating such content in all its varying forms.
-            DeltaVision technology is powered by a stream of privacy-assured data, collated and contextualised from thousands of confirmed sources of harm. It is unique in its ability to capture new content from confirmed sources of harm as it
-            appears,
-            enabling our customers to capture harmful data before it takes hold in the mainstream.
-          </div>
-        </div>
-        <div class="col-lg-1"></div>
-      </div>
-      <br>
       <br>
       <div class="row">
         <div class="col-lg-12 centered semi-large-size">
@@ -314,6 +280,46 @@
             Understand the scale and nature of harmful content
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- SECTION 3-1 -->
+    <div class="container-fluid section-3-1 box" id="technology">
+      <br>
+      <div class="container-fluid row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-3">
+          <div class="box medium-size">
+            ECT: Early Capture Technology
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="box small-size">
+            Our SAAS Technology is built on the principle that good data is a priority for successful AI outcomes.
+            We have spent a decade building a deep understanding of content from dangerous organisations and individuals
+            to inform our Early Capture Technology. We do not use black-box algorithms and believe the path to a safer internet
+            can only be achieved using proportionate, compliant and measurable technology.
+          </div>
+        </div>
+        <div class="col-lg-1"></div>
+      </div>
+      <br>
+      <div class="container-fluid row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-3">
+          <div class="box medium-size">
+            What is ECT?
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="box small-size">
+            The nature and scale of harmful online content is constantly evolving. Platforms and technology companies across Web2, Web3 and the metaverse face enormous challenges in identifying and eradicating such content in all its varying forms.
+            DeltaVision technology is powered by a stream of privacy-assured data, collated and contextualised from thousands of confirmed sources of harm. It is unique in its ability to capture new content from confirmed sources of harm as it
+            appears,
+            enabling our customers to capture harmful data before it takes hold in the mainstream.
+          </div>
+        </div>
+        <div class="col-lg-1"></div>
       </div>
     </div>
 

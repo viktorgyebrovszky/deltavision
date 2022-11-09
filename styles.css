@@ -1,7 +1,7 @@
 /* SMOOTH SCROLL DOWN FOR SECTIONS */
 :root {
-  --lighter: #0f0f1c;
-  --darker: #0b0f14;
+  --lighter: #35353A;
+  --darker: #202124;
   --grreenish: #2DC838;
 }
 
@@ -234,7 +234,7 @@ align-items: center;
 
 /* SECTION 3 */
 .section-3 {
-  background: var(--darker);
+  background: var(--lighter);
   padding: 4% 10% 4% 10%;
 }
 
@@ -247,6 +247,12 @@ align-items: center;
   height: 10rem;
   width: 10rem;
   margin: .3rem;
+}
+
+/* SECTION 3-1 */
+.section-3-1 {
+  background: var(--darker);
+  padding: 4% 10% 4% 10%;
 }
 
 /* SECTION 4 */
@@ -292,7 +298,7 @@ align-items: center;
   height: 15rem;
   padding: 0;
   border-radius: 100%;
-  border: 5px solid #2c3a52;
+  border: 5px solid var(--darker);
   /* border-top-left-radius: 164px;
   border-bottom-left-radius: 164px;
   border-right: 0; */
