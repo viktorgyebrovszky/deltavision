@@ -10,7 +10,7 @@ html, body {
   height: 100%; */
   /* margin: 0px;
   padding: 0px; */
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   scroll-behavior: smooth;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -141,11 +141,11 @@ html, body {
 }
 
 /* FADE INS */
-.fade-in {
+.fade {
   /* margin: 50px;
   padding: 50px;
   background-color: lightgreen; */
-  /* opacity: 1; */
+  opacity: 1;
 }
 
 /* SECTION 1 */
@@ -194,12 +194,12 @@ li {
 }
 
 .stats-pic {
-  background: rgba(204, 204, 204, 0.2);
+  /* background: rgba(204, 204, 204, 0.2); */
   display: inline;
   border-radius: 0.2rem;
   font-size: 50px;
   font-weight: lighter;
-  color: black !important;
+  color: white !important;
 }
 
 /* SECTION 3 */
