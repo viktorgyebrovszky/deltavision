@@ -21,7 +21,7 @@ var TxtType = function(el, toRotate, period) {
         this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
         var that = this;
-        var delta = 100 - Math.random() * 100; /*typing speed*/
+        var delta = 150 - Math.random() * 100; /*typing speed*/
 
         if (this.isDeleting) { delta /= 3; } /*deleting speed*/
 

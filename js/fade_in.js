@@ -1,16 +1,27 @@
-$(window).on("load",function() {
-  $(window).scroll(function() {
-    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-    $(".fade").each(function() {
-      /* Check the location of each desired element */
-      var objectBottom = $(this).offset().top + $(this).outerHeight();
+var header = document.getElementById('who_is');
 
-      /* If the element is completely within bounds of the window, fade it in */
-      if (objectBottom < windowBottom) { //object comes into view (scrolling down)
-        if ($(this).css("opacity")==0) {$(this).fadeTo(500,1);}
-      } else { //object goes out of view (scrolling up)
-        if ($(this).css("opacity")==1) {$(this).fadeTo(500,0);}
-      }
-    });
-  }).scroll(); //invoke scroll-handler on page-load
-});
+function fadeOutOnScroll(element) {
+	if (!element) {
+		return;
+	}
+
+	var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
+	var elementHeight = element.offsetHeight;
+	var scrollTop = document.documentElement.scrollTop;
+
+	var opacity = 1;
+
+	if (scrollTop > distanceToTop) {
+		opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
+	}
+
+	if (opacity >= 0) {
+		element.style.opacity = opacity;
+	}
+}
+
+function scrollHandler() {
+	fadeOutOnScroll(header);
+}
+
+window.addEventListener('scroll', scrollHandler);
