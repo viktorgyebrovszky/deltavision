@@ -227,15 +227,27 @@ li {
   padding: 4% 10% 4% 10%;
 }
 
-.profile_img{
-  width: 16rem;
-  height: 16rem;
+.profile_img_cropper{
+  width: 14rem;
+  height: 14rem;
   padding: 0;
-  border-radius: 100%;
+  border-radius: 50%;
   border: 5px solid #35353A;
+  overflow: hidden;
   /* border-top-left-radius: 164px;
   border-bottom-left-radius: 164px;
   border-right: 0; */
+}
+.profile_img{
+  width: 17rem;
+  height: 17rem;
+  padding: 0;
+  border-radius: 50%;
+  /* border: 5px solid #35353A; */
+  /* border-top-left-radius: 164px;
+  border-bottom-left-radius: 164px;
+  border-right: 0; */
+
 }
 
 .image_center{
@@ -318,9 +330,10 @@ li {
 
 /* SECTION 5 */
 .section-5 {
-  background: var(--darker);
+  background: var(--lighter);
   /* height: 150vh; */
   padding: 20% 3% 20% 3%;
+  color: var(--darker) !important;
 }
 
 /* SECTION 6 */
@@ -329,6 +342,7 @@ li {
   color: white;
   height: 30px;
   padding: 10px 0 0 5px;
+  color: var(--darker) !important;
 }
 
 /* SIDEBAR CONTACT */
