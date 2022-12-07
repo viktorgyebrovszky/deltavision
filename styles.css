@@ -336,8 +336,13 @@ li {
 .section-5 {
   background: var(--lighter);
   /* height: 150vh; */
-  padding: 7% 3% 7% 3%;
+  padding: 5% 3% 5% 3%;
   color: var(--darker) !important;
+}
+
+.ostia_img{
+  height: 4rem;
+  width: 3rem;
 }
 
 /* SECTION 6 */
