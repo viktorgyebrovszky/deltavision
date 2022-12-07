@@ -228,8 +228,8 @@ li {
 }
 
 .profile_img_cropper{
-  width: 14rem;
-  height: 14rem;
+  width: 12rem;
+  height: 12rem;
   padding: 0;
   border-radius: 50%;
   border: 5px solid #35353A;
@@ -239,8 +239,8 @@ li {
   border-right: 0; */
 }
 .profile_img{
-  width: 17rem;
-  height: 17rem;
+  width: 13.5rem;
+  height: 13.5rem;
   padding: 0;
   border-radius: 50%;
   /* border: 5px solid #35353A; */
