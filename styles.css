@@ -39,11 +39,48 @@ html, body {
   border-left: 0; */
 }
 
+.go-up{
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+  animation: fadeInLeft 5s;
+}
+
+.go-up.appear{
+  opacity: 1;
+}
+
+/* @keyframes fadeInLeft {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+} */
+
+.memberships{
+  position:absolute;
+  top:40%;
+  left:80%;
+}
+
+
 .wave_js {
   position:relative;
   top:40%;
   /* z-index: 99999; */
 }
+
+.btn_approach {
+  position:absolute;
+  top:90%;
+  left:85%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  outline: none;
+  border: none;
+  color: #bbea00;
+  font-size: 1.5rem;
+  /* z-index: 99999; */
+}
+
+.btn_approach:focus { outline: none; }
 
 /* NAVBAR */
 
@@ -109,7 +146,7 @@ html, body {
   /*include this only if you need a hyperlink*/
   text-decoration: none;
   width: 100%;
-  font-size: 3.2rem;
+  font-size: 3.8rem;
   font-weight: bold;
   font-family: 'Source Code Pro', monospace;
 }
@@ -312,11 +349,6 @@ li {
   border-right: 0; */
 }
 
-.btn {
-  display: inline;
-  padding: 7px;
-}
-
 /* githup image for crousel */
 .skill-img-2 {
   height: 1.5rem;
@@ -377,6 +409,24 @@ input[type=submit]:hover {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+}
+
+.btn_form {
+  display: inline;
+  padding: 7px;
+}
+
+.btn_form {
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.btn_form:hover {
+  background-color: white;
+  color: var(--grreenish);
+  border-radius: 8px;
+  border: 1px solid var(--grreenish);
 }
 
 /* SECTION 6 */

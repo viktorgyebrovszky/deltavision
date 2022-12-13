@@ -68,7 +68,7 @@
               <a class="nav-link hover-underline-animation" href="#customers">Customers</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link hover-underline-animation" href="#about" style="color:#bbea00">The Team</a>
+              <a class="nav-link hover-underline-animation" href="#about">The Team</a>
             </li>
             <li class="nav-item">
               <a class="nav-link hover-underline-animation" href="#contact">Contact</a>
@@ -83,15 +83,34 @@
       <div class="" id='main'>
         <!-- <div class="col-lg-1"></div> -->
         <div class="col-lg-8 wave_js" style="padding: 0 0 0 5%">
+          <a class="typewrite" data-period="2000" data-type='["Data", "Ethics", "Legal", "Trust", "Analytics"]'>
+            <span class="wrap"></span>
+          </a>
           <h1 align='left'>
-            DeltaVision technology (
-            <a class="typewrite" data-period="2000" data-type='["Data", "Ethics", "Legal", "Trust", "Analytics"]'>
-              <span class="wrap"></span>
-            </a>
-            )
-            <br>detects dangerous and illegal online content at source.
+            DeltaVision technology detects dangerous and illegal online content at source.
           </h1>
         </div>
+
+        <div>
+            <a href="#approach"><button type="submit" class="btn_approach"><i class="fas fa-angle-left"></i> Our Approach</button></a>
+        </div>
+
+        <div class="memberships">
+          <div style="text-align:center; border: 1px solid #3b4a01; border-radius: 6px; padding:15px">
+            <a href="https://ostia.org.uk/" target="_blank">
+              <img src="images/ostia.png"  width="210" height="75">
+            </a>
+          </div>
+          <br>
+          <br>
+          <div style="text-align:center; border: 1px solid #3b4a01; border-radius: 6px; padding:15px">
+            <a href="https://www.safetytechnetwork.org.uk/" target="_blank">
+              <img src="images/safetytech.svg"  width="220" height="55">
+            </a>
+          </div>
+        </div>
+
+
 
         <script type="text/javascript" src="js/three.js">
         </script>
@@ -442,67 +461,10 @@
 
     <!-- SECTION 5 -->
     <div class="container-fluid section-5 box" id='contact'>
-      <div class="row">
-        <div style="width:100%;text-align:center;">
-          <a href="https://ostia.org.uk/" target="_blank">
-            <img src="images/OSTIA-Black.png"  width="50" height="50">
-          </a>
-        </div>
 
-      </div>
-      <div class="row">
-        <div class="col-lg-12 centered">
-          Human Digital are a member of the Online Safety Tech Association.
-        </div>
-      </div>
-      <br>
+      
 
-      <!-- <?php
-      // echo "<pre>";
-      //   print_r($_POST);
-
-
-      $message_sent=false;
-
-      if(isset($_POST['email']) && $_POST['email'] != ''){
-
-        if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
-
-          $userName = $_POST['name'];
-          // $userBusiness = $_POST['business'];
-          $userEmail = $_POST['email'];
-          $messageSubject = $_POST['subject'];
-          $message = $_POST['message'];
-
-          $to = "viktor@human-digital.com";
-          $body = "";
-          $body .= "Name: ".$userName. "\r\n";
-          // $body .= "Business: ".$userBusiness. "\r\n";
-          $body .= "Email address: ".$userEmail. "\r\n";
-          $body .= "Message: ".$message. "\r\n";
-
-          mail($to, $messageSubject, $body);
-
-          $message_sent=true;
-        }
-
-      }
-
-      // echo "</pre>";
-
-      ?>
-
-      <?php
-      if($message_sent):
-      ?>
-
-        <h3 style="width:100%;text-align:center;">Thanks we'll be in touch</h3>
-
-      <?php
-      else:
-      ?> -->
-
-      <div class="container">
+      <div class="container" style='background-color:white'>
         <form id="form_submission" action="/#contact" method="POST" class="form">
             <div class="form-group">
                 <label for="name" class="form-label">Your Name</label>
@@ -513,22 +475,37 @@
                 <input type="email" class="form-control" id="email" name="email" placeholder="jane@doe.com" tabindex="2" required>
             </div>
             <div class="form-group">
-                <label for="subject" class="form-label">Subject</label>
-                <input type="text" class="form-control" id="subject" name="subject" placeholder="Hello There!" tabindex="3" required>
+                <label for="company" class="form-label">Company</label>
+                <input type="text" class="form-control" id="company" name="company" placeholder="Your Company..." tabindex="3" required>
             </div>
             <div class="form-group">
                 <label for="message" class="form-label">Message</label>
                 <textarea class="form-control" rows="5" cols="50" id="message" name="message" placeholder="Enter Message..." tabindex="4" required></textarea>
             </div>
             <div>
-                <button type="submit" class="btn">Submit</button>
+                <button type="submit" class="btn_form">Submit</button>
             </div>
         </form>
     </div>
 
-    <!-- <?php
+    <?php
     endif;
-    ?> -->
+    ?>
+
+
+    <!--
+    $conn_string = "host=hd-rds-development-cluster.cluster-cxqp4co8nabg.eu-west-1.rds.amazonaws.com port=5432 dbname=product01_black_db user=plotly_user password=angrysugar91$%^!";
+    $dbconn = pg_connect($conn_string);
+    //connect to a database named "test" on the host "sheep" with a username and password
+
+    $query .= "UPDATE authors SET author=NULL WHERE id=3;";
+
+    pg_query($dbconn, $query);
+
+
+     -->
+
+
 
     <br>
     </div>
