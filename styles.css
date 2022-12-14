@@ -2,7 +2,7 @@
 :root {
   --lighter: white;  /* #35353A */
   --darker: black;     /* #202124 */
-  --grreenish: #2DC838;
+  --grreenish: #8db002;
 }
 
 html, body {
@@ -57,7 +57,7 @@ html, body {
 .memberships{
   position:absolute;
   top:40%;
-  left:80%;
+  left:81%;
 }
 
 

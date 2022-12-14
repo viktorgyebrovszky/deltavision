@@ -56,22 +56,22 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link hover-underline-animation" href="#home">Home</a>
+              <a class="nav-link hover-underline-animation" href="#home" style="color: white">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link hover-underline-animation" href="#approach">Our Approach</a>
+              <a class="nav-link hover-underline-animation" href="#approach" style="color: white">Our Approach</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link hover-underline-animation" href="#services">Our Services</a>
+              <a class="nav-link hover-underline-animation" href="#services" style="color: white">Our Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link hover-underline-animation" href="#customers">Customers</a>
+              <a class="nav-link hover-underline-animation" href="#customers" style="color: white">Customers</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link hover-underline-animation" href="#about">The Team</a>
+              <a class="nav-link hover-underline-animation" href="#about" style="color: white">The Team</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link hover-underline-animation" href="#contact">Contact</a>
+              <a class="nav-link hover-underline-animation" href="#contact" style="color: white">Contact</a>
             </li>
           </ul>
         </div>
@@ -208,7 +208,7 @@
     <!-- SECTION 2 -->
     <div class="container-fluid section-2 box" id="approach">
       <div class="row">
-        <div class="col-lg-3" style="color:#bbea00">
+        <div class="col-lg-3" style="color:#8db002">
           <h1 align='left'><b>Our <br>Approach</b></h1>
         </div>
         <div class="col-lg-9">
@@ -323,11 +323,9 @@
 
     <!-- SECTION 4 -->
     <div class="container-fluid section-3 box" id='customers'>
-      <br>
-      <br>
       <div class="row">
         <div class="col-lg-12 centered semi-large-size">
-          <b style="color:#bbea00">Who is DeltaVision for?</b>
+          <b style="color:#8db002">Who is DeltaVision for?</b>
         </div>
       </div>
       <br>
@@ -386,6 +384,13 @@
     <!-- SECTION 3-1 -->
     <div class="container-fluid section-3-1 box" id="about">
       <br>
+      <div class="row">
+        <div class="col-lg-3">
+          <h1><b>The <br>Team</b></h1>
+        </div>
+        <div class="col-lg-9">
+        </div>
+      </div>
       <div class="container-fluid row">
         <div class="col-lg-1"></div>
         <div class="col-lg-3">
@@ -462,7 +467,53 @@
     <!-- SECTION 5 -->
     <div class="container-fluid section-5 box" id='contact'>
 
-      
+
+      <!-- <?php
+      // echo "<pre>";
+      //   print_r($_POST);
+
+
+      $message_sent=false;
+
+      if(isset($_POST['email']) && $_POST['email'] != ''){
+
+        if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+
+          $userName = $_POST['name'];
+          // $userBusiness = $_POST['business'];
+          $userEmail = $_POST['email'];
+          $messageCompany = $_POST['company'];
+          $messageSubject = 'DELTAVISION WEBSITE REQUEST';
+          $message = $_POST['message'];
+
+          $to = "viktor@human-digital.com";
+          $body = "";
+          $body .= "Name: ".$userName. "\r\n";
+          $body .= "Company: ".$messageCompany. "\r\n";
+          // $body .= "Business: ".$userBusiness. "\r\n";
+          $body .= "Email address: ".$userEmail. "\r\n";
+          $body .= "Message: ".$message. "\r\n";
+
+          mail($to, $messageSubject, $body);
+
+          $message_sent=true;
+        }
+
+      }
+
+      // echo "</pre>";
+
+      ?>
+
+      <?php
+      if($message_sent):
+      ?>
+
+        <h3 style="width:100%;text-align:center;">Thanks we'll be in touch</h3>
+
+      <?php
+      else:
+      ?> -->
 
       <div class="container" style='background-color:white'>
         <form id="form_submission" action="/#contact" method="POST" class="form">
@@ -488,24 +539,19 @@
         </form>
     </div>
 
-    <?php
+    <!-- <?php
     endif;
     ?>
 
-
-    <!--
-    $conn_string = "host=hd-rds-development-cluster.cluster-cxqp4co8nabg.eu-west-1.rds.amazonaws.com port=5432 dbname=product01_black_db user=plotly_user password=angrysugar91$%^!";
-    $dbconn = pg_connect($conn_string);
-    //connect to a database named "test" on the host "sheep" with a username and password
-
-    $query .= "UPDATE authors SET author=NULL WHERE id=3;";
-
-    pg_query($dbconn, $query);
-
-
-     -->
-
-
+    <?php
+    // $conn_string = "host=hd-rds-development-cluster.cluster-cxqp4co8nabg.eu-west-1.rds.amazonaws.com port=5432 dbname=product01_black_db user=plotly_user password=angrysugar91$%^!";
+    // $dbconn = pg_connect($conn_string);
+    // //connect to a database named "test" on the host "sheep" with a username and password
+    //
+    // $query .= "insert into plotly_user_test_schema.test_persons (firstname, lastname) values ('john','smith');";
+    //
+    // pg_query($dbconn, $query);
+    ?> -->
 
     <br>
     </div>
