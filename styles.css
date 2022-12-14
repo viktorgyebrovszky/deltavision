@@ -243,7 +243,7 @@ li {
 /* SECTION 3 */
 .section-3 {
   background: var(--lighter);
-  padding: 7% 10% 7% 10%;
+  padding: 7% 10% 8% 10%;
   color: var(--darker) !important;
 }
 
@@ -368,7 +368,7 @@ li {
 .section-5 {
   background: var(--lighter);
   /* height: 150vh; */
-  padding: 5% 3% 5% 3%;
+  padding: 7% 10% 7% 10%;
   color: var(--darker) !important;
 }
 
