@@ -39,19 +39,26 @@ html, body {
   border-left: 0; */
 }
 
-.go-up{
-  opacity: 1;
-  transition: opacity 250ms ease-in;
+.fade_in{
+  /* opacity: 1; */
+  /* transition: opacity 250ms fade-in-right; */
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* .fade_in_left{
   animation: fadeInLeft 5s;
 }
 
-.go-up.appear{
-  opacity: 1;
-}
-
-/* @keyframes fadeInLeft {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+@keyframes fadeInLeft {
+  from {left: 0%;
+        opacity: 0;}
+  to {left: 7%;
+      opacity: 1;}
 } */
 
 .memberships{
