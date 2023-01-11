@@ -50,6 +50,14 @@ html, body {
   100% { opacity: 1; }
 }
 
+.fade {
+  transition: opacity 0.7s ease-in;
+}
+
+.fadeOut { opacity: 0; }
+.fadeIin { opacity: 1; }
+
+
 /* .fade_in_left{
   animation: fadeInLeft 5s;
 }
@@ -65,6 +73,21 @@ html, body {
   position:absolute;
   top:40%;
   left:81%;
+}
+
+.memberships_hover{
+  text-align:center;
+  border: 1px solid #3b4a01;
+  border-radius: 6px;
+  padding:15px
+}
+
+.memberships_hover:hover{
+  text-align:center;
+  border: 1px solid yellow;
+  border-radius: 6px;
+  padding:15px;
+  background-color: rgb(245, 221, 7,0.2);
 }
 
 
@@ -83,6 +106,19 @@ html, body {
   outline: none;
   border: none;
   color: #bbea00;
+  font-size: 1.5rem;
+  /* z-index: 99999; */
+}
+
+.btn_approach:hover {
+  position:absolute;
+  top:90%;
+  left:85%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  outline: none;
+  border: none;
+  color: yellow;
   font-size: 1.5rem;
   /* z-index: 99999; */
 }
@@ -191,12 +227,13 @@ html, body {
 }
 
 /* FADE INS */
+
 .fade {
-  /* margin: 50px;
-  padding: 50px;
-  background-color: lightgreen; */
-  opacity: 1;
+  transition: opacity 0.7s ease-in;
 }
+
+.fadeOut { opacity: 0; }
+.fadeIn { opacity: 1; }
 
 /* SECTION 1 */
 .section-1 {
@@ -455,6 +492,8 @@ input[type=submit]:hover {
   -o-transform:translateY(-50%);
   -moz-transform:translateY(-50%);
   transform: translateY(-50%);
+  opacity: 0;
+  z-index: 999999;
 
 }
 

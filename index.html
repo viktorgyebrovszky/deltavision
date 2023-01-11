@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 <html lang="en" dir="ltr">
 <html lang="en">
 
@@ -10,38 +9,35 @@
 
   <!-- favicon -->
 
-
-  <!-- Load font awesome icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="styles.css">
-  <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
 
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
 
-  <!-- TYPER JS -->
-  <!-- <script src="js/bootstrap.js"></script> -->
-  <script type="text/javascript" src="js/fade_in.js"></script>
   <script type="text/javascript" src="js/typer.js"></script>
+  <script type="text/javascript" src="js/three.js"></script>
+  <script type="text/javascript" src="js/fade_in.js"></script>
+  <script type="text/javascript" src="js/fade_out_arrow.js"></script>
   <script type="text/javascript" src="js/popup.js"></script>
-  <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
   <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
 
 
   <!-- BOOTSTRAP SCRIPTS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 
 
 </head>
 
 <body>
   <div class="container-fluid">
+
     <div class="navigator" id="navbar">
       <nav class="navbar navbar-expand-md navbar-dark navbar-custom">
         <div class="col-6 col-lg-2 col-md-4 col-sm-6 col-xs-6" style="line-height: 0.6; color: grey">
@@ -58,9 +54,9 @@
             <li class="nav-item">
               <a class="nav-link hover-underline-animation" href="#home" style="color: white">Home</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link hover-underline-animation" href="#approach" style="color: white">Our Approach</a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link hover-underline-animation" href="#services" style="color: white">Our Services</a>
             </li>
@@ -96,94 +92,22 @@
         </div>
 
         <div class="memberships fade_in">
-          <div style="text-align:center; border: 1px solid #3b4a01; border-radius: 6px; padding:15px">
+          <div class="memberships_hover">
             <a href="https://ostia.org.uk/" target="_blank">
               <img src="images/ostia.png"  width="210" height="75">
             </a>
           </div>
           <br>
           <br>
-          <div style="text-align:center; border: 1px solid #3b4a01; border-radius: 6px; padding:15px">
+          <div class="memberships_hover">
             <a href="https://www.safetytechnetwork.org.uk/" target="_blank">
               <img src="images/safetytech.svg"  width="220" height="55">
             </a>
           </div>
         </div>
 
-
-
-        <script type="text/javascript" src="js/three.js">
-        </script>
         <div>
-          <script>
-            var background_waves_background_color = "black";
-            var background_waves_mesh_color = "#3b4a01";
-            // #083d01
-
-            function wavesBackground() {
-              var vertex_height = 12500,
-                plane_segments_size = 100,
-                plane_size = 1445000,
-                background_color = background_waves_background_color,
-                mesh_color = background_waves_mesh_color;
-              var container = document.getElementById('main'),
-                inital_Z = [],
-                count = 0;
-              var camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 1, 400000)
-              camera.position.z = 10000;
-              camera.position.y = 11500;
-              var scene = new THREE.Scene();
-              scene.fog = new THREE.Fog(background_color, 1, 200000);
-              var geometry = new THREE.PlaneGeometry(plane_size, plane_size, plane_segments_size, plane_segments_size);
-              var mesh = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({
-                color: mesh_color,
-                wireframe: !0
-              }));
-              mesh.rotation.x -= Math.PI * .5;
-              scene.add(mesh);
-              var renderer = new THREE.WebGLRenderer({
-                alpha: !1
-              });
-              renderer.setSize(window.innerWidth, window.innerHeight);
-              renderer.setClearColor(background_color, 1);
-              container.appendChild(renderer.domElement);
-
-              function updateGeometry() {
-                for (var i = 0; i < geometry.attributes.position.count; i++) {
-                  var z = Math.random() * vertex_height - vertex_height;
-                  geometry.attributes.position.setZ(i, z);
-                  inital_Z[i] = z
-                }
-              };
-              updateGeometry();
-
-              function render() {
-                requestAnimationFrame(render);
-                var x = camera.position.x;
-                var z = camera.position.z;
-                camera.position.x = x * Math.cos(0.001) + z * Math.sin(0.001) - 10;
-                camera.position.z = z * Math.cos(0.001) - x * Math.sin(0.001) - 10;
-                camera.lookAt(new THREE.Vector3(0, 9000, 0))
-                for (var i = 0; i < geometry.attributes.position.count; i++) {
-                  var next_z = Math.sin((i + count * 0.00002)) * (inital_Z[i] - (inital_Z[i] * 0.6));
-                  if (next_z !== next_z) return;
-                  geometry.attributes.position.setZ(i, next_z);
-                  geometry.attributes.position.needsUpdate = !0;
-                  count += 0.075
-                }
-                renderer.render(scene, camera)
-              }
-              render();
-
-              function resize() {
-                camera.aspect = window.innerWidth / window.innerHeight;
-                camera.updateProjectionMatrix();
-                renderer.setSize(window.innerWidth, window.innerHeight)
-              }
-              window.addEventListener('resize', resize, !1)
-            };
-            wavesBackground();
-          </script>
+          <script type="text/javascript" src="js/waves.js"></script>
         </div>
 
 
@@ -206,8 +130,10 @@
     </div>
 
     <!-- SECTION 2 -->
+    <!-- <div class="fader2" id="approach_div" style="color:green;text-align:center;background-color:red;width:50%;">Element 7</div> -->
     <div class="container-fluid section-2 box" id="approach">
-      <div class="row">
+
+      <div class="fader2 row">
         <div class="col-lg-3" style="color:#8db002">
           <h1 align='left'><b>Our <br>Approach</b></h1>
         </div>
@@ -224,7 +150,7 @@
 
     <!-- SECTION 3 -->
     <div class="container-fluid section-4 box" id="services">
-      <div class="row">
+      <div class="fader3 row">
         <div class="col-lg-3">
           <h1><b>Our <br>Services</b></h1>
         </div>
@@ -581,5 +507,7 @@
     </div>
   </div>
 </body>
+
+<script type="text/javascript" src="js/fade_in.js"></script>
 
 </html>
