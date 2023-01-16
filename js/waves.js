@@ -1,5 +1,5 @@
 var background_waves_background_color = "black";
-var background_waves_mesh_color = "#3b4a01";
+var background_waves_mesh_color = "#4b5e01";
 // #083d01
 
 function wavesBackground() {

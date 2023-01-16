@@ -71,7 +71,7 @@ html, body {
 
 .memberships{
   position:absolute;
-  top:40%;
+  top:28%;
   left:81%;
 }
 
@@ -83,17 +83,14 @@ html, body {
 }
 
 .memberships_hover:hover{
-  text-align:center;
   border: 1px solid yellow;
-  border-radius: 6px;
-  padding:15px;
   background-color: rgb(245, 221, 7,0.2);
 }
 
 
 .wave_js {
   position:relative;
-  top:40%;
+  top:28%;
   /* z-index: 99999; */
 }
 
@@ -104,26 +101,46 @@ html, body {
   background-color: transparent;
   background-repeat: no-repeat;
   outline: none;
-  border: none;
+  border: 1px solid #3b4a01;
+  border-radius: 6px;
+  padding:0 10px 0 10px;
   color: #bbea00;
   font-size: 1.5rem;
   /* z-index: 99999; */
 }
 
-.btn_approach:hover {
-  position:absolute;
-  top:90%;
-  left:85%;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  outline: none;
-  border: none;
+/* .btn_approach:hover {
   color: yellow;
-  font-size: 1.5rem;
-  /* z-index: 99999; */
 }
 
-.btn_approach:focus { outline: none; }
+.btn_approach:focus { outline: none; } */
+
+.btn_approach:hover {
+  color: yellow;
+  transition: 0.5s;
+}
+
+.btn_contact {
+  position:fixed;
+  top:90%;
+  left:4%;
+  background: linear-gradient(to right, rgb(245, 221, 7,0.5) 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .3s ease-out;
+  outline: none;
+  border: 1px solid #3b4a01;
+  border-radius: 6px;
+  padding:0 10px 0 10px;
+  color: #bbea00;
+  font-size: 1.5rem;
+  z-index: 99999;
+}
+
+.btn_contact:hover {
+  background-position: left bottom;
+  color: black;
+}
 
 /* NAVBAR */
 
