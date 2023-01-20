@@ -40,6 +40,29 @@
 
 // document.getElementById("approach_div").style.backgroundColor = "blue";
 
+// HOME
+function scrollHandlerHome() {
+  var element = document.getElementById('home');
+
+  var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top+300;
+  var elementHeight = element.offsetHeight;
+	var scrollTop = document.documentElement.scrollTop;
+
+	var opacity = 1;
+
+	if (scrollTop > distanceToTop) {
+    diff = scrollTop - distanceToTop
+		opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
+	}
+
+	if (opacity >= 0) {
+		element.style.opacity = opacity;
+	}
+  // console.log(diff)
+
+}
+
+window.addEventListener('scroll', scrollHandlerHome);
 
 // APPROACH
 function scrollHandlerApproach() {
@@ -66,7 +89,7 @@ window.addEventListener('scroll', scrollHandlerApproach);
 function scrollHandlerServices() {
   var element = document.getElementById('services');
 
-  var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top-50;
+  var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top+300;
   var elementHeight = element.offsetHeight;
 	var scrollTop = document.documentElement.scrollTop;
 
@@ -108,7 +131,7 @@ window.addEventListener('scroll', scrollHandlerCustomers);
 function scrollHandlerAbout() {
   var element = document.getElementById('about');
 
-  var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
+  var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top+400;
   var elementHeight = element.offsetHeight;
 	var scrollTop = document.documentElement.scrollTop;
 
