@@ -69,11 +69,11 @@ html, body {
       opacity: 1;}
 } */
 
-.memberships{
+/* .memberships{
   position:absolute;
   top:28%;
   left:81%;
-}
+} */
 
 .memberships_hover{
   text-align:center;
@@ -94,10 +94,14 @@ html, body {
   /* z-index: 99999; */
 }
 
+.btn_approach_row{
+  position:sticky;
+  top:85%;
+
+}
+
 .btn_approach {
-  position:absolute;
-  top:90%;
-  left:85%;
+
   background-color: transparent;
   background-repeat: no-repeat;
   outline: none;
@@ -376,6 +380,7 @@ li {
   height: 11.5rem;
   padding: 0;
   border-radius: 50%;
+  object-fit: contain;
   /* border: 5px solid #35353A; */
   /* border-top-left-radius: 164px;
   border-bottom-left-radius: 164px;
@@ -423,7 +428,7 @@ li {
 .carousel-textbox{
   width: 30%;
   height: 10rem;
-  text-align: center;
+  text-align: center !important;
 }
 
 .project-topic {
@@ -440,6 +445,7 @@ li {
   padding: 0;
   border-radius: 100%;
   border: 5px solid #35353A;
+  object-fit: cover;
   /* border-top-left-radius: 164px;
   border-bottom-left-radius: 164px;
   border-right: 0; */
