@@ -89,19 +89,19 @@ html, body {
 
 
 .wave_js {
-  position:relative;
+  position:sticky;
   top:28%;
   /* z-index: 99999; */
 }
 
 .btn_approach_row{
   position:sticky;
-  top:85%;
+  top: 82%;
 
 }
 
 .btn_approach {
-
+  margin-left:15px;
   background-color: transparent;
   background-repeat: no-repeat;
   outline: none;
