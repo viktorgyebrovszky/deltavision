@@ -131,7 +131,7 @@ window.addEventListener('scroll', scrollHandlerCustomers);
 function scrollHandlerAbout() {
   var element = document.getElementById('about');
 
-  var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top+400;
+  var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top+600;
   var elementHeight = element.offsetHeight;
 	var scrollTop = document.documentElement.scrollTop;
 

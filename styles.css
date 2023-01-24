@@ -96,7 +96,7 @@ html, body {
 
 .btn_approach_row{
   position:sticky;
-  top:85%;
+  top:95%;
 
 }
 
@@ -148,7 +148,7 @@ html, body {
 
 .btn_contact {
   position:fixed;
-  top:90%;
+  top:95%;
   left:5%;
   color: #99bf02;
   border: 1px solid #3b4a01;
@@ -371,6 +371,7 @@ li {
   border-radius: 50%;
   border: 5px solid #35353A;
   overflow: hidden;
+  object-fit: contain;
   /* border-top-left-radius: 164px;
   border-bottom-left-radius: 164px;
   border-right: 0; */
@@ -380,7 +381,7 @@ li {
   height: 11.5rem;
   padding: 0;
   border-radius: 50%;
-  object-fit: contain;
+
   /* border: 5px solid #35353A; */
   /* border-top-left-radius: 164px;
   border-bottom-left-radius: 164px;
@@ -394,7 +395,7 @@ li {
 
 .image_center{
   margin: 0;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
