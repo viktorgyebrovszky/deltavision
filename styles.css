@@ -96,7 +96,7 @@ html, body {
 
 .btn_approach_row{
   position:sticky;
-  top:95%;
+  top:91.5%;
 
 }
 
@@ -148,8 +148,8 @@ html, body {
 
 .btn_contact {
   position:fixed;
-  top:95%;
-  left:5%;
+  top:92%;
+  left:2%;
   color: #99bf02;
   border: 1px solid #3b4a01;
   text-decoration: none;
